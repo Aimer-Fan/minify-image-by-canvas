@@ -20,7 +20,7 @@ class Minifytor {
   }
 
   /**
-   * 大小不变改变图片品质
+   * 改变图片品质
    * @param {Number} quality 图片的质量 0~1 值越大清晰度越高
    */
   minify (quality) {
