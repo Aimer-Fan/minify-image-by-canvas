@@ -10,20 +10,17 @@
 <body>
   <input type="file" name="file" id="fileInput" onchange="handleChange()">
 
-  <script src="./js/minifyImageByCanvas.js"></script>
+  <script src="./index.js"></script>
   <script>
     function handleChange() {
       const fileList = event.target.files
       if (fileList && fileList.length === 1) {
         const file = fileList[0]
-        function minifyImageByCanvas(file) {
-          const minifytor = new Minifytor(file)
-          minifytor.minifyRatio(500, 500).then(image => {
-            document.body.appendChild(image)
-            console.log(image)
-          })
-        }
-        minifyImageByCanvas(file)
+        const minifytor = new Minifytor(file)
+        minifytor.minifyRatio(500, 500).then(image => {
+          document.body.appendChild(image)
+          console.log(image)
+        })
       }
     }
   </script>
