@@ -1,0 +1,9 @@
+{
+  "include": ["*.ts"],
+  "compilerOptions": {
+    "lib": ["ES2016", "DOM"],
+    "outDir": "./demo",
+    "module": "UMD",
+    "sourceMap": true
+  }
+}

@@ -16,10 +16,11 @@
       const fileList = event.target.files
       if (fileList && fileList.length === 1) {
         const file = fileList[0]
-        const minifytor = new Minifytor(file)
-        minifytor.minifyRatio(500, 500).then(image => {
-          document.body.appendChild(image)
-          console.log(image)
+        const minifytor = new MinifyImage(file)
+        minifytor.minify(50).then(file => {
+          minifytor.filetoImage(file).then(image => {
+            document.body.appendChild(image)
+          })
         })
       }
     }
